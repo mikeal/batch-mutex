@@ -1,0 +1,22 @@
+{
+  "name": "batch-mutex",
+  "version": "0.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "lint": "standard",
+    "pretest": "npm run lint",
+    "test:node": "polendina-node bare-async test/test-*.js",
+    "test:browser": "polendina --runner=bare-async test/test-*.js",
+    "test": "hundreds npm run test:node && npm run test:browser"
+  },
+  "keywords": [],
+  "author": "Mikeal Rogers <mikeal.rogers@gmail.com> (https://www.mikealrogers.com/)",
+  "license": "(Apache-2.0 AND MIT)",
+  "devDependencies": {
+    "hundreds": "0.0.2",
+    "polendina": "^0.1.0",
+    "sleep-promise": "^8.0.1",
+    "standard": "^14.3.1"
+  }
+}
