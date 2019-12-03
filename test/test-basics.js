@@ -49,3 +49,7 @@ exports.testBatchDefault = async () => {
   const totals = await basicTest()
   assert.deepStrictEqual(totals, [1, 125249, 499500])
 }
+exports.testEmpty = async () => {
+  const write = main(() => {})
+  assert.strictEqual(write.onEmpty(), true)
+}

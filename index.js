@@ -24,6 +24,7 @@ module.exports = (batch, maxQueue = 1000) => {
     }
   }
   write.onEmpty = () => {
+    if (!waiting) return true
     return new Promise(resolve => {
       onEmpties.push(resolve)
     })
